@@ -1,0 +1,17 @@
+{
+	"name": "webpack-2.0-from-scratch",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "webpack --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"webpack": "^3.10.0",
+		"webpack-dev-server": "^2.10.0"
+	}
+}
