@@ -1,8 +1,8 @@
-require("./styles.scss")
+require("./assets/stylesheets/styles.scss")
 
 class Car {
 	manufacturer(car) {
-		document.write(`I have a ${car}`);
+		document.write(`<div>I have a ${car}<div>`);
 	}
 }
 
