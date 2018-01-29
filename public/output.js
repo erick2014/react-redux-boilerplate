@@ -68,38 +68,13 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-__webpack_require__(1);
-
-var Car = function () {
-	function Car() {
-		_classCallCheck(this, Car);
-	}
-
-	_createClass(Car, [{
-		key: "manufacturer",
-		value: function manufacturer(car) {
-			document.write("I have a " + car);
-		}
-	}]);
-
-	return Car;
-}();
-
-var bmw = new Car();
-
-bmw.manufacturer('bmw');
+eval("\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n__webpack_require__(1);\n\nvar Car = function () {\n\tfunction Car() {\n\t\t_classCallCheck(this, Car);\n\t}\n\n\t_createClass(Car, [{\n\t\tkey: \"manufacturer\",\n\t\tvalue: function manufacturer(car) {\n\t\t\tdocument.write(\"I have a \" + car);\n\t\t}\n\t}]);\n\n\treturn Car;\n}();\n\nvar bmw = new Car();\n\nbmw.manufacturer('bmw');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW5kZXguanM/OTU1MiJdLCJuYW1lcyI6WyJyZXF1aXJlIiwiQ2FyIiwiY2FyIiwiZG9jdW1lbnQiLCJ3cml0ZSIsImJtdyIsIm1hbnVmYWN0dXJlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsbUJBQUFBLENBQVEsQ0FBUjs7SUFFTUMsRzs7Ozs7OzsrQkFDUUMsRyxFQUFLO0FBQ2pCQyxZQUFTQyxLQUFULGVBQTJCRixHQUEzQjtBQUNBOzs7Ozs7QUFHRixJQUFNRyxNQUFNLElBQUlKLEdBQUosRUFBWjs7QUFFQUksSUFBSUMsWUFBSixDQUFpQixLQUFqQiIsImZpbGUiOiIwLmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZShcIi4vc3R5bGVzLnNjc3NcIilcblxuY2xhc3MgQ2FyIHtcblx0bWFudWZhY3R1cmVyKGNhcikge1xuXHRcdGRvY3VtZW50LndyaXRlKGBJIGhhdmUgYSAke2Nhcn1gKTtcblx0fVxufVxuXG5jb25zdCBibXcgPSBuZXcgQ2FyKCk7XG5cbmJtdy5tYW51ZmFjdHVyZXIoJ2JtdycpO1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///0\n");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzLnNjc3M/Nzc3NyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiIxLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gcmVtb3ZlZCBieSBleHRyYWN0LXRleHQtd2VicGFjay1wbHVnaW5cblxuXG4vLy8vLy8vLy8vLy8vLy8vLy9cbi8vIFdFQlBBQ0sgRk9PVEVSXG4vLyAuL3NyYy9zdHlsZXMuc2Nzc1xuLy8gbW9kdWxlIGlkID0gMVxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///1\n");
 
 /***/ })
 /******/ ]);
