@@ -10,6 +10,15 @@ let config = {
 		path: path.resolve(__dirname, './public'),
 		filename: 'output.js'
 	},
+	resolve: {
+		//Automatically resolve certain extensions
+		extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.jpeg', '.jpg', '.gift', '.png'],
+		//create aliases
+		alias: {
+			images: path.resolve(__dirname, 'src/assets/images'),
+			components: path.resolve(__dirname, 'src/app/components')
+		}
+	},
 	module: {
 		rules: [
 			{
