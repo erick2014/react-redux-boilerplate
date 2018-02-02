@@ -3,7 +3,7 @@ require('./assets/stylesheets/styles.scss');
 //import react dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, BrowserRouter, Link } from 'react-router-dom';
 
 //Redux stuff
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
@@ -38,28 +38,16 @@ const MyApp = () => {
 	return (
 		<Provider store={store}>
 			<ConnectedRouter history={history}>
-				<Switch>
-					<Route path="/" component={Home} />
-					<Route path="/about" component={About} />
-				</Switch>
+				<Router>
+					<div>
+						<Route exact path="/" component={Home} />
+						<Route path="/about" component={About} />
+					</div>
+				</Router>
 			</ConnectedRouter>
 		</Provider>
 	);
 }
-
-// const MainLayout = () => (
-// 	<div className="mainLayout">
-// 		<Route path="/" component={Home} />
-// 		<Route path="/about" component={About} />
-// 	</div>
-// );
-
-/*const App = () => (
-	<BrowserRouter>
-		<MyApp />
-	</BrowserRouter>
-);*/
-
 
 //render our App componnet and mount it to our #root element
 ReactDOM.render(<MyApp />, document.getElementById('root'));
