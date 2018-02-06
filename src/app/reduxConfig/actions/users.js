@@ -1,13 +1,13 @@
-import { FETCH_USERS_REQUEST } from '../constants/constants';
+import { FETCH_USERS_REQUEST } from '../constants/constants'
 
 const fetchUsers = () => {
-	return {
-		type: FETCH_USERS_REQUEST
-	}
+  return {
+    type: FETCH_USERS_REQUEST
+  }
 }
 
 const userActions = {
-	fetchUsers
+  fetchUsers
 }
 
-export default userActions;
+export default userActions

@@ -1,12 +1,12 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+const express = require('express')
+const path = require('path')
+const app = express()
 
-app.use(express.static('./public'));
+app.use(express.static('./public'))
 
 app.get('/', function (req, res) {
-  console.log("loading / path");
-  res.sendFile(path.join(__dirname, './public', 'index.html'));
-});
+  console.log('loading / path')
+  res.sendFile(path.join(__dirname, './public', 'index.html'))
+})
 
-module.exports = app;
+module.exports = app
