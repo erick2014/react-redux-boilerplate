@@ -1,16 +1,18 @@
 // import react dependencies
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 
 // Redux stuff
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import createHistory from 'history/createHashHistory'
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
+import { createBrowserHistory } from 'history'
+import { routerReducer, routerMiddleware } from 'react-router-redux'
 // main app component
 import Home from 'components/Home/Home.jsx'
-import About from 'components/About/About.jsx'
+import Contact from 'components/Contact/Contact.jsx'
+
+import thunkMiddleware from 'redux-thunk'
 
 // import reducers
 import usersReducer from 'reduxConfig/reducers/users'
@@ -23,27 +25,37 @@ const mainReducer = combineReducers({
   routing: routerReducer
 })
 
-const history = createHistory()
+const history = createBrowserHistory()
 
 const store = createStore(
   mainReducer,
   undefined,
   compose(
-    applyMiddleware(routerMiddleware(history)),
+    applyMiddleware(
+      routerMiddleware(history),
+      thunkMiddleware
+    ),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 )
+
+class App extends Component {
+  render () {
+    return (
+      <div>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/contact' component={Contact} />
+      </div>
+    )
+  }
+}
+
 const MyApp = () => {
   return (
     <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <Router>
-          <div>
-            <Route exact path='/' component={Home} />
-            <Route path='/about' component={About} />
-          </div>
-        </Router>
-      </ConnectedRouter>
+      <Router history={history}>
+        <App />
+      </Router>
     </Provider>
   )
 }

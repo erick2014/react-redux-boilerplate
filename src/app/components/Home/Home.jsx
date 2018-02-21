@@ -36,6 +36,7 @@ class Home extends Component {
   }
 
   render () {
+    console.log('we get users? ',this.props.users)
     const cardsComponents = this.buildAnimalCard()
     return (
       <div className='container'>
