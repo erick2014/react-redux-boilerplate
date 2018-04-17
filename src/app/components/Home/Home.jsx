@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import userActions from 'reduxConfig/actions/users'
 // images
 import cat from 'images/cat.jpg'
-import dog from 'images/dog.png'
-import dogs from 'images/dogs.gif'
 
 class Home extends Component {
   constructor (props) {
@@ -13,8 +11,8 @@ class Home extends Component {
     this.state = {
       animals: [
         { 'key': 1, 'type': cat },
-        { 'key': 2, 'type': dog },
-        { 'key': 3, 'type': dogs }
+        { 'key': 2, 'type': 'dog' },
+        { 'key': 3, 'type': 'dogs' }
       ]
     }
   }
@@ -36,7 +34,7 @@ class Home extends Component {
   }
 
   render () {
-    console.log('we get users? ',this.props.users)
+    console.log('we get users? ', this.props.users)
     const cardsComponents = this.buildAnimalCard()
     return (
       <div className='container'>
