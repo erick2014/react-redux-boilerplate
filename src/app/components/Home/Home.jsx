@@ -6,7 +6,7 @@ import userActions from 'reduxConfig/actions/users'
 import cat from 'images/cat.jpg'
 
 class Home extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       animals: [
@@ -17,12 +17,12 @@ class Home extends Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     // dispatch action to fetch users
     this.props.fetchUsers()
   }
 
-  buildAnimalCard () {
+  buildAnimalCard = () => {
     const cards = this.state.animals.map((animal, index) => {
       return (
         <div key={index} className='image-wrapper'>
@@ -33,7 +33,7 @@ class Home extends Component {
     return cards
   }
 
-  render () {
+  render() {
     console.log('we get users? ', this.props.users)
     const cardsComponents = this.buildAnimalCard()
     return (
