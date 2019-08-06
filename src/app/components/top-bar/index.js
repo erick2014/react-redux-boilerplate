@@ -22,6 +22,9 @@ function ButtonAppBar() {
           <IconButton aria-label="delete">
             <CustomIcon iconName='bell' />
           </IconButton>
+          <IconButton aria-label="delete">
+            <CustomIcon iconName='search' />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>
