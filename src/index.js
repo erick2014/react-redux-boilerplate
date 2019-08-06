@@ -1,17 +1,17 @@
-// import react dependencies
+// vendors
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route } from 'react-router-dom'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 
 // Redux stuff
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
-// main app component
-import Home from 'components/Home/Home.jsx'
-import Contact from 'components/Contact/Contact.jsx'
 
+// main app component
+import HomePage from './app/home-page';
 import thunkMiddleware from 'redux-thunk'
 
 // import reducers
@@ -19,6 +19,9 @@ import usersReducer from 'reduxConfig/reducers/users'
 
 // import general styles
 require('./assets/stylesheets/styles.scss')
+
+// utils
+import theme from './material-ui-theme';
 
 const mainReducer = combineReducers({
   users: usersReducer,
@@ -40,11 +43,10 @@ const store = createStore(
 )
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <Route exact path='/home' component={Home} />
-        <Route exact path='/contact' component={Contact} />
+        <Route exact path='/' component={HomePage} />
       </div>
     )
   }
@@ -54,7 +56,9 @@ const MyApp = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <App />
+        <MuiThemeProvider theme={theme}>
+          <App />
+        </MuiThemeProvider>
       </Router>
     </Provider>
   )
