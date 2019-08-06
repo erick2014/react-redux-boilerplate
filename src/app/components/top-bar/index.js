@@ -4,20 +4,15 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/styles';
-import NotificationsIcon from '@material-ui/icons/NotificationsNone';
-
 import CustomIcon from '../custom-icon'
 
 const useStyles = makeStyles(theme => ({
-  fontSizeSmall: {
-    fontSize: 10
-  },
   grow: {
     flexGrow: 1
   }
 }));
 
-export default function ButtonAppBar() {
+function ButtonAppBar() {
   const classes = useStyles()
   return (
     <div>
@@ -25,13 +20,12 @@ export default function ButtonAppBar() {
         <Toolbar>
           <div className={classes.grow} />
           <IconButton aria-label="delete">
-            <CustomIcon />
-          </IconButton>
-          <IconButton aria-label="" color="inherit" size='medium'>
-            <NotificationsIcon />
+            <CustomIcon iconName='bell' />
           </IconButton>
         </Toolbar>
       </AppBar>
     </div>
   )
 }
+
+export default ButtonAppBar;

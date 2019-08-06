@@ -40,6 +40,7 @@
     "express": "^4.16.2",
     "history": "^4.7.2",
     "pm2": "^2.10.1",
+    "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-redux": "^5.0.6",
